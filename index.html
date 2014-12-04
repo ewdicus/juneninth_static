@@ -38,17 +38,26 @@
             </g>
         </svg>
     <script type="text/javascript">
-        document.addEventListener( "DOMContentLoaded", function(){
+        function doLoad(){
             var svg = new Walkway({
               selector: '.svg-stroke-content',
               duration: '2000',
               easing: 'easeInOutCubic'
             });
 
+            document.getElementsByClassName('svg-content')[0].classList.add("visible");
+
             svg.draw(function(){
                 document.getElementsByClassName('svg-fill-content')[0].classList.add("show");
             });
-        }, false );
+        }
+
+        if(window.addEventListener){
+            window.addEventListener('load', doLoad, false);
+        }
+        else if(window.attachEvent) {
+            window.attachEvent('onload', doLoad );
+        }
     </script>
     </body>
 </html>

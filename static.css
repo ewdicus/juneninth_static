@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-image: url(img/background.jpg);
+    background-image: url(img/background_compressed.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -24,6 +24,7 @@ body {
 
 .svg-content {
     width: 60%;
+    visibility: hidden;
 }
 
 .svg-fill-content {
@@ -32,6 +33,10 @@ body {
     stroke: none;
     -moz-transition: opacity 1s ease-in-out;
     -webkit-transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    visibility: visible;
 }
 
 .show {
